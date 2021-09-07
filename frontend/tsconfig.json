@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    //orientar o typescript da origem dos arquivos deful.
+    "baseUrl": "./src",
     "target": "es5",
     "lib": [
       "dom",
