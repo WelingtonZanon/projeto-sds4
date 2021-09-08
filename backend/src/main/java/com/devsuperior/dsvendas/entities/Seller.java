@@ -10,15 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="tb_sellers")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Seller {
 	
 	@Id
