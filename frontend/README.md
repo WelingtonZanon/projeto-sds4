@@ -1,46 +1,131 @@
-# Getting Started with Create React App
+# ![DevSuperior logo](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/devsuperior-logo-small.png) Semana Spring React SDS4
+## Realização
+[DevSuperior - Escola de programação](https://devsuperior.com.br)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![DevSuperior no Instagram](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/ig-icon.png)](https://instagram.com/devsuperior.ig)
+[![DevSuperior no Youtube](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/yt-icon.png)](https://youtube.com/devsuperior)
 
-## Available Scripts
+- Conferir NPM
+```bash
+npm -v
+npm install --global 
+```
 
-In the project directory, you can run:
+### criar projetos
+- Criar projeto ReactJS com `create-react-app`:
+```bash
+npx create-react-app frontend --template typescript
+```
+- *Lembrete: excluir repositório Git do projeto ReactJS*
+- Criar projeto Spring Boot no `Spring Initializr` com as seguintes dependências:
+  - Web
+  - JPA
+  - H2
+  - Postgres
+  - Security
+- Se tiver com erro no pom.xml, tentar:
+  - Botão direito no projeto -> Maven -> Update project (force update)
+  - Menu Project -> Clean
+  - Apagar pasta .m2 e deixar o STS refazer o download
+- **COMMIT: Project created**
 
-### `npm start`
+- *Lembrete: ver extensões e arquivos ocultos*
+- Salvar o projeto no seu Github
+```bash
+git config --global user.name <seu nome>
+git config --global user.email <seu email>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+git init
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+git add .
 
-### `npm test`
+git commit -m "Project created"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git remote add origin <seu endereço>
 
-### `npm run build`
+git push -u origin main
+```
+### "limpar" o projeto ReactJS
+- Limpar projeto ReactJS / tsconfig.json
+- Arquivo _redirects
+```
+/* /index.html 200
+```
+### adicionar Bootstrap e CSS ao projeto
+- Bootstrap
+```
+npm add bootstrap
+```
+```
+(index.tsx) import 'bootstrap/dist/css/bootstrap.css';
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### adicionar gráficos estáticos
+- Apex Charts
+```bash
+npm add apexcharts
+npm add react-apexcharts
+```
+- Três pilares do React
+  - Componentes
+  - Props
+  - Estado
+- React Hooks
+  - useState
+  - useEffect
+- Libs
+  - React Router DOM
+  - Axios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Rotas
 
-### `npm run eject`
+- Instalar React Router DOM
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn add react-router-dom
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yarn add @types/react-router-dom -D
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Criar páginas Home e Dashboard
+- Criar arquivo de rotas `Routes.tsx`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### First request
 
-## Learn More
+- Instalar Axios
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm add axios
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Definir BASE_URL
+- Definir tipo SaleSum
+- Definir tipo local ChartData em DonutChart
+- Fazer a requisição e tratar os dados
+
+### DataTable integration
+
+- Instalar date-fns ao projeto
+
+```bash
+yarn add date-fns
+```
+
+- Criar tipos Seller, Sale, SalePage
+- Criar função auxiliar formatLocalDate
+
+### implantação no Netlify
+- Deploy básico
+  - Base directory: frontend
+  - Build command: npm build
+  - Publish directory: frontend/build
+
+- Configurações adicionais
+  - Site settings -> Domain Management: (colocar o nome que você quiser)
+  - Deploys -> Trigger deploy
+
+## **PARABÉNS!**
+
+![Parabéns!](https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/trophy.png)
+
